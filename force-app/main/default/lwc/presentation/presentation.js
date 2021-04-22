@@ -8,16 +8,7 @@
 **/
 import { LightningElement } from 'lwc';
 
-export default class CallFiveStar extends LightningElement
+export default class Presentation extends LightningElement
 {
-    rating;
-    connectedCallback()
-    {
-        this.rating = 0;
-    }
     
-    handleRatingChanged(event)
-    {
-        console.log('Rating : ' + event.detail.rating);
-    }
 }
