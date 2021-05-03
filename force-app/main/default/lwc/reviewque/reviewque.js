@@ -10,7 +10,7 @@ import { LightningElement, api, track } from 'lwc';
 
 export default class Reviewque extends LightningElement
 {
-    @track currentStep = 'Step1';
+    @track selectedStep = 'Step1';
 
     handleNext() {
         var getselectedStep = this.selectedStep;
@@ -62,5 +62,4 @@ export default class Reviewque extends LightningElement
     get isSelectStep4() {
         return this.selectedStep === "Step4";
     }
-   
 }

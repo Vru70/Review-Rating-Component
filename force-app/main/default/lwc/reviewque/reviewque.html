@@ -1,33 +1,34 @@
 <!--
-  @author            : Vrushabh Uprikar
-  @last modified on  : 05-03-2021
-  @last modified by  : Vrushabh Uprikar
-  Modifications Log 
-  Ver   Date         Author             Modification
-  1.0   05-03-2021   Vrushabh Uprikar   Initial Version
--->
+    @author            : Vrushabh Uprikar
+    @last modified on  : 05-03-2021
+    @last modified by  : Vrushabh Uprikar
+    Modifications Log 
+    Ver   Date         Author             Modification
+    1.0   05-03-2021   Vrushabh Uprikar   Initial Version
+    -->
 <template>
 
     <div class="slds-theme_default">
-        <div class="slds-grid slds-wrap slds-p-around_medium">
-            <div class="slds-col slds-size_1-of-1 ">
-                <lightning-progress-indicator type="base" current-step={currentStep}>
-                    <lightning-progress-step label="Presentation" onstepfocus={selectStep1} value="Presentation">
+        <div class="slds-grid slds-wrap slds-p-horizontal_x-small">
+            <div class="slds-col slds-size_1-of-1 slds-p-vertical_medium">
+                <lightning-progress-indicator type="base" current-step={selectedStep}>
+                    <lightning-progress-step label="Presentation" onstepfocus={selectStep1} value="Step1">
                     </lightning-progress-step>
-                    <lightning-progress-step label="Video" onstepfocus={selectStep2} value="Video">
+                    <lightning-progress-step label="Video" onstepfocus={selectStep2} value="Step2">
                     </lightning-progress-step>
-                    <lightning-progress-step label="Audio" onstepfocus={selectStep3} value="Audio">
+                    <lightning-progress-step label="Audio" onstepfocus={selectStep3} value="Step3">
                     </lightning-progress-step>
-                    <lightning-progress-step label="Other" onstepfocus={selectStep4} value="Other">
+                    <lightning-progress-step label="Other" onstepfocus={selectStep4} value="Step4">
                     </lightning-progress-step>
                 </lightning-progress-indicator>
             </div>
-            <br/>
+
+            <br />
+
             <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> Presentation </div>
             <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> Video </div>
             <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> Audio </div>
             <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> Other </div>
-
 
         </div>
 
