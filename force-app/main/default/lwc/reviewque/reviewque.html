@@ -1,6 +1,6 @@
 <!--
     @author            : Vrushabh Uprikar
-    @last modified on  : 05-03-2021
+    @last modified on  : 05-04-2021
     @last modified by  : Vrushabh Uprikar
     Modifications Log 
     Ver   Date         Author             Modification
@@ -40,7 +40,7 @@
                 </div>
 
                 <lightning-checkbox-group name="Checkbox Group" options={options_p}
-                                            value={value_p} onchange={handleCheckbox}>
+                                            value={value_p} onchange={handleCheckbox_p}>
                 </lightning-checkbox-group>
                 <p>Selected Values are: {selectedValues}</p>
             </template>
@@ -48,16 +48,24 @@
                 <div class="slds-text-align_center slds-text-heading_small">
                     <strong>What went wrong?</strong>
                 </div>
+                <lightning-checkbox-group name="Checkbox Group" options={options_v} value={value_v} onchange={handleCheckbox_v}>
+                </lightning-checkbox-group>
+                <p>Selected Values are: {selectedValues}</p>
             </template>
             <template if:true={varSelectStep3}>
                 <div class="slds-text-align_center slds-text-heading_small">
                     <strong>What went wrong?</strong>
                 </div>
+                <lightning-checkbox-group name="Checkbox Group" options={options_a} value={value_a} onchange={handleCheckbox_a}>
+                </lightning-checkbox-group>
+                <p>Selected Values are: {selectedValues}</p>
             </template>
             <template if:true={varSelectStep4}>
                 <div class="slds-text-align_center slds-text-heading_small">
                     <strong>What went wrong?</strong>
-                </div>
+                </div> 
+                <lightning-textarea name="otherdetail" value={value_o} onchange={onchnage_o} placeholder="Tell us more...">
+                </lightning-textarea>
             </template>
 
         </div>

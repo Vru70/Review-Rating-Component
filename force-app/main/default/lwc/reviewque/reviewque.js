@@ -80,6 +80,11 @@ export default class Reviewque extends LightningElement
     {
         alert('Submited...');
         this.selectedStep = 'Step1';
+        this.varSelectStep1 = true;
+        this.varSelectStep2 = false;
+        this.varSelectStep3 = false;
+        this.varSelectStep4 = false;
+
     }
   
 
@@ -132,7 +137,15 @@ export default class Reviewque extends LightningElement
      * Cheack Box Logic
      */
 
-    value_p = [''];
+    @track value_p = [''];
+    @track value_v = [''];
+    @track value_a = [''];
+    @track value_o = '';
+
+    onchange_o(event)
+    {
+        this.value_o = event.target.value;
+    }
 
     get options_p()
     {
@@ -145,13 +158,45 @@ export default class Reviewque extends LightningElement
         ];
     }
 
-    get selectedValues()
+    get options_v()
     {
-        return this.value_p.join(',');
+        return [
+            { label: 'I couldn\'t see the presentation', value: 'v1' },
+            { label: 'The presentation was blurry ', value: 'v2' },
+            { label: 'The presentation was slow to update', value: 'v3' },
+            { label: 'I couldn\'t present', value: 'v4' },
+            { label: 'Other presentation issue', value: 'v5' },
+        ];
     }
 
-    handleCheckbox(e)
+    get options_a()
+    {
+        return [
+            { label: 'I couldn\'t see the presentation', value: 'a1' },
+            { label: 'The presentation was blurry ', value: 'a2' },
+            { label: 'The presentation was slow to update', value: 'a3' },
+            { label: 'I couldn\'t present', value: 'a4' },
+            { label: 'Other presentation issue', value: 'a5' },
+        ];
+    }
+
+    get selectedValues()
+    {
+        return this.value_p.join(',')+' '+this.value_a.join(',')+' '+this.value_v.join(',');
+    }
+
+    handleCheckbox_p(e)
     {
         this.value_p = e.detail.value;
+    }
+
+    handleCheckbox_a(e)
+    {
+        this.value_a = e.detail.value;
+    }
+
+    handleCheckbox_v(e)
+    {
+        this.value_v = e.detail.value;
     }
 }
