@@ -1,6 +1,6 @@
 <!--
   @author            : Vrushabh Uprikar
-  @last modified on  : 04-20-2021
+  @last modified on  : 05-03-2021
   @last modified by  : Vrushabh Uprikar
   Modifications Log 
   Ver   Date         Author             Modification
@@ -9,15 +9,19 @@
 <template>
     <div>
         <lightning-card>
-            <div class="slds-text-align_center slds-text-heading_medium">How was the audio and video?</div>
-            <br/>
-            <div class="slds-grid slds-wrap">
-                <div class="slds-col slds-size_1-of-1">
-                    <span>
-                        <c-five-star-rating value={rating} onratingchange={handleRatingChanged}></c-five-star-rating>
-                    </span>
+            <div>
+                <div class="slds-text-align_center slds-text-heading_medium">How was the audio and video?</div>
+                <br />
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-1">
+                        <span>
+                            <c-five-star-rating value={rating} onratingchange={handleRatingChanged}>
+                            </c-five-star-rating>
+                        </span>
+                    </div>
                 </div>
-            </div>  
+            </div>
+            <c-reviewque></c-reviewque>
         </lightning-card>
     </div>
 </template>
