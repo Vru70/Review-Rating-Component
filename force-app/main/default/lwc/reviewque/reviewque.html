@@ -31,21 +31,32 @@
             <div class="slds-col slds-size_1-of-4 slds-align_absolute-center"> Other </div>
 
         </div>
-        <div class="slds-box slds-p-around_x-small">
+        <div class="slds-box slds-m-around_x-small slds-p-around_x-small">
+
             <template if:true={varSelectStep1}>
-                <div class="slds-text-align_center slds-text-heading_small"><strong>What went wrong? STep1</strong>
+
+                <div class="slds-text-align_center slds-text-heading_small">
+                    <strong>What went wrong?</strong>
                 </div>
+
+                <lightning-checkbox-group name="Checkbox Group" options={options_p}
+                                            value={value_p} onchange={handleCheckbox}>
+                </lightning-checkbox-group>
+                <p>Selected Values are: {selectedValues}</p>
             </template>
             <template if:true={varSelectStep2}>
-                <div class="slds-text-align_center slds-text-heading_small"><strong>What went wrong? STep2</strong>
+                <div class="slds-text-align_center slds-text-heading_small">
+                    <strong>What went wrong?</strong>
                 </div>
             </template>
             <template if:true={varSelectStep3}>
-                <div class="slds-text-align_center slds-text-heading_small"><strong>What went wrong? STep3</strong>
+                <div class="slds-text-align_center slds-text-heading_small">
+                    <strong>What went wrong?</strong>
                 </div>
             </template>
             <template if:true={varSelectStep4}>
-                <div class="slds-text-align_center slds-text-heading_small"><strong>What went wrong? STep4</strong>
+                <div class="slds-text-align_center slds-text-heading_small">
+                    <strong>What went wrong?</strong>
                 </div>
             </template>
 
