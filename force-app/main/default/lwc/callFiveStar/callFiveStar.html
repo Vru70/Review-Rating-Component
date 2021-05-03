@@ -1,6 +1,6 @@
 <!--
   @author            : Vrushabh Uprikar
-  @last modified on  : 05-03-2021
+  @last modified on  : 05-04-2021
   @last modified by  : Vrushabh Uprikar
   Modifications Log 
   Ver   Date         Author             Modification
@@ -21,7 +21,10 @@
                     </div>
                 </div>
             </div>
+            <template if:true={lessthanthree}>
             <c-reviewque></c-reviewque>
+            </template>
+
         </lightning-card>
     </div>
 </template>
