@@ -1,3 +1,36 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-03-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-03-2021   Vrushabh Uprikar   Initial Version
+-->
 <template>
-    
+    <div class="slds-theme_default">
+        <div class="slds-p-around_medium">
+            <lightning-progress-indicator type="base" current-step={currentStep}>
+                <lightning-progress-step label="Presentation" onstepfocus={selectStep1} value="Presentation">
+                </lightning-progress-step>
+                <lightning-progress-step label="Video" onstepfocus={selectStep2} value="Video">
+                </lightning-progress-step>
+                <lightning-progress-step label="Audio" onstepfocus={selectStep3} value="Audio">
+                </lightning-progress-step>
+                <lightning-progress-step label="Other" onstepfocus={selectStep4} value="Other">
+                </lightning-progress-step>
+            </lightning-progress-indicator>
+
+            <div class="slds-m-vertical_medium">
+                <lightning-button label="Back" class="slds-m-left_x-small" onclick={handlePrev}></lightning-button>
+                <template if:false={isSelectStep4}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}>
+                    </lightning-button>
+                </template>
+                <template if:true={isSelectStep4}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Finish" onclick={handleFinish}>
+                    </lightning-button>
+                </template>
+            </div>
+        </div>
+    </div>
 </template>
