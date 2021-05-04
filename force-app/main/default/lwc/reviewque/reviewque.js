@@ -161,22 +161,24 @@ export default class Reviewque extends LightningElement
     get options_v()
     {
         return [
-            { label: 'I couldn\'t see the presentation', value: 'v1' },
-            { label: 'The presentation was blurry ', value: 'v2' },
-            { label: 'The presentation was slow to update', value: 'v3' },
-            { label: 'I couldn\'t present', value: 'v4' },
-            { label: 'Other presentation issue', value: 'v5' },
+            { label: 'My camera did not work', value: 'v1' },
+            { label: 'The video was breaking up', value: 'v2' },
+            { label: 'The video was blurry', value: 'v3' },
+            { label: 'Audio and Video were not in sync', value: 'v4' },
+            { label: 'I couldnt see others video', value: 'v5' },
+            { label: 'Othetr video issue', value: 'v6' },
         ];
     }
 
     get options_a()
     {
         return [
-            { label: 'I couldn\'t see the presentation', value: 'a1' },
-            { label: 'The presentation was blurry ', value: 'a2' },
-            { label: 'The presentation was slow to update', value: 'a3' },
-            { label: 'I couldn\'t present', value: 'a4' },
-            { label: 'Other presentation issue', value: 'a5' },
+            { label: 'Audio was breaking up', value: 'a1' },
+            { label: 'I could not hear others', value: 'a2' },
+            { label: 'Other could not hear me', value: 'a3' },
+            { label: 'Sound was delayed', value: 'a4' },
+            { label: 'There was echo', value: 'a5' },
+            { label: 'Othetr audio issue', value: 'a6' },
         ];
     }
 
