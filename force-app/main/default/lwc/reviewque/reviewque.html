@@ -1,6 +1,6 @@
 <!--
     @author            : Vrushabh Uprikar
-    @last modified on  : 05-04-2021
+    @last modified on  : 05-05-2021
     @last modified by  : Vrushabh Uprikar
     Modifications Log 
     Ver   Date         Author             Modification
@@ -70,16 +70,20 @@
 
         </div>
 
-        <div class="slds-m-vertical_medium">
-            <lightning-button label="Back" class="slds-m-left_x-small" onclick={handlePrev}></lightning-button>
-            <template if:false={isSelectStep4}>
-                <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}>
-                </lightning-button>
-            </template>
-            <template if:true={isSelectStep4}>
-                <lightning-button variant="brand" class="slds-m-left_x-small" label="Submit" onclick={handleFinish}>
-                </lightning-button>
-            </template>
+        <div class="slds-m-vertical_medium slds-grid slds-wrap">
+            <div class="slds-col slds-size_3-of-12 slds-float_left">
+                <lightning-button label="Back" class="slds-m-left_x-small" onclick={handlePrev}></lightning-button>
+            </div>
+            <div class="slds-col slds-size_3-of-12 slds-float_right">
+                <template if:false={isSelectStep4}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Next" onclick={handleNext}>
+                    </lightning-button>
+                </template>
+                <template if:true={isSelectStep4}>
+                    <lightning-button variant="brand" class="slds-m-left_x-small" label="Submit" onclick={handleFinish}>
+                    </lightning-button>
+                </template>
+            </div>
         </div>
 
     </div>
